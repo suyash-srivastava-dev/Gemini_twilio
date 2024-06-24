@@ -1,0 +1,5 @@
+.DS_Store
+DigiCertGlobalRootCA.crt
+env/dev.env
+*.cpython-311.pyc
+*.png
