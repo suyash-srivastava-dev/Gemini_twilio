@@ -31,11 +31,13 @@ session = requests.Session()
 session.mount('https://', SSLAdapter())
 
 client = Client(account_sid, auth_token, http_client=session)
-def send_to_phone(msg:str):
+def send_to_phone(msg:str,phone_num:str):
+    if(phone_num==None or phone_num==""):
+        phone_num=receivers_number
     message = client.messages.create(
         body=f'{msg}',
         from_=f'whatsapp:{twilio_number}',  # This is Twilio's sandbox number
-        to=f'whatsapp:{receivers_number}'  # Replace with the recipient's phone number
+        to=f'whatsapp:{phone_num}'  # Replace with the recipient's phone number
     )
 
     print(message.sid)

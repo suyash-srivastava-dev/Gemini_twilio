@@ -44,12 +44,15 @@ chat_session = model.start_chat(
 
 def send_prompt(message:str):
     # message="Create a task to bring milk from shop on 24 Jun 5pm, and the contact number is +9199448283"
-    prompt=f'''
-              Given the following text: {message}. Extract the task description, date, time, and contact information. Create a sutiable name for the task as well. Output should look like:\n           name: [Name of task]\n           description: [Description of task not including time and date]\n           timeStamp: [Date with time in ISO-8601 format]\n           Contact: [Contact information with +1 extension code]\n          Do not include any other generated text or information.
-            '''
+    # prompt=f'''
+    #           Given the following text: {message}. Extract the task description, date, time, and contact information. Create a sutiable name for the task as well. Output should look like:\n           name: [Name of task]\n           description: [Description of task not including time and date]\n           timeStamp: [Date with time in ISO-8601 format]\n           Contact: [Contact information with +1 extension code]\n          Do not include any other generated text or information.
+    #         '''
+    generation_config["response_mime_type"]="application/json"
+    prompt=message
     response = chat_session.send_message(prompt)
-    print(response.text)
-    return json.loads(response.text)
+    print(response)
+    res_json={"output":response.text}
+    return res_json
 
 def send_msq_with_prompt(message:str,prompt_req:str):
     prompt = f'''
