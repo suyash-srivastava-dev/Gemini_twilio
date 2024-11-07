@@ -8,13 +8,18 @@ Setup the keys for Twilio & Gemin API as per the [demo.env](env/demo.env) file.
 
 Twilio service :
 
-![https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi4qnr9vecrg0155rxuel.png](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi4qnr9vecrg0155rxuel.png)
-
 For exposing local services used [ngrok](https://ngrok.com/)
 
 - Fetch the forwarding url `ngrok http http://localhost:8000`
 - Set the sandbox url as per the ngrok 
 ![Alt text](assets/image.png)
+
+## Demo
+
+**Youtube Demo Video** : [https://www.youtube.com/watch?v=JFXHCvpv4Fc](https://www.youtube.com/watch?v=JFXHCvpv4Fc)
+
+[![Youtube Demo Video](https://img.youtube.com/vi/JFXHCvpv4Fc/0.jpg)](https://www.youtube.com/watch?v=JFXHCvpv4Fc)
+
 
 
 ## Example
